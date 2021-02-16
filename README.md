@@ -1,16 +1,16 @@
 # OpenID Connect
 
-This is based on (Kevin Dockx's Securing ASP.NET Core 3 with OAuth 2 and OpenID Connect project)[https://github.com/KevinDockx/SecuringAspNetCore3WithOAuth2AndOIDC].
+This is based on [Kevin Dockx's Securing ASP.NET Core 3 with OAuth 2 and OpenID Connect project](https://github.com/KevinDockx/SecuringAspNetCore3WithOAuth2AndOIDC).
 
-A few tweaks were needed to get it to run on MacOS
+A few tweaks were needed to get it to run on MacOS.
 
-Namely the datasource had to change as LocalDB is not support on MacOS.
+Namely the datasource had to change, as LocalDB is not support on MacOS.
 
-An alternative db source can be create with the following command in Docker.
+An alternative db source can be created with the following command in Docker.
 
 `docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest`
 
-And then, in `appsettings.json` the `ImageGalleryDBConnectionString` value should be update to `Server=localhost;Database=ImageGalleryDB;User Id=SA;Password=yourStrong(!)Password`
+And then, in `appsettings.json` the `ImageGalleryDBConnectionString` value should be updated to `Server=localhost;Database=ImageGalleryDB;User Id=SA;Password=yourStrong(!)Password`
 
 ---
 
